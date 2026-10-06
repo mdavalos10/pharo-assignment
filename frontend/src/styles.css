@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap");
+:root {
+  font-family: "DM Sans", system-ui, sans-serif;
+  color: #18233b;
+  background: #f5f7fb;
+  font-synthesis: none;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+.app {
+  max-width: 1500px;
+  margin: auto;
+  padding: 0 44px;
+}
+header {
+  height: 88px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e0e5ef;
+}
+.brand {
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.brand span {
+  color: #4263eb;
+}
+.badge {
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: #69758a;
+  background: #edf0f6;
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+.intro {
+  padding: 38px 0 30px;
+}
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: 1.8px;
+  font-weight: 700;
+  color: #72819a;
+  margin: 0 0 12px;
+}
+h1 {
+  font-size: 34px;
+  letter-spacing: -1px;
+  margin: 0 0 10px;
+}
+.intro > p:last-child {
+  color: #768196;
+  font-size: 14px;
+  margin: 0;
+}
+main {
+  display: grid;
+  grid-template-columns: 270px minmax(0, 1fr);
+  gap: 24px;
+}
+.panel {
+  background: white;
+  border: 1px solid #e3e8f0;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px #192d4e03;
+}
+aside {
+  padding: 22px 16px;
+  align-self: start;
+}
+h2 {
+  font-size: 16px;
+  margin: 0;
+}
+.sidebar-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.sidebar-title > span {
+  font-size: 11px;
+  background: #f0f3f8;
+  border-radius: 5px;
+  padding: 4px 7px;
+}
+label[for="search"] {
+  font-size: 11px;
+  color: #68768b;
+  display: block;
+  margin-bottom: 8px;
+}
+#search {
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #dce2ed;
+  border-radius: 6px;
+  font: inherit;
+  font-size: 12px;
+}
+.hint {
+  font-size: 11px;
+  color: #7c879b;
+  line-height: 1.6;
+}
+.ticker-list {
+  max-height: 480px;
+  overflow: auto;
+  margin-top: 18px;
+}
+.ticker {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 12px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+}
+.ticker.active {
+  background: #eef2ff;
+  color: #4263eb;
+}
+.ticker input {
+  accent-color: #4263eb;
+}
+.ticker small {
+  margin-left: auto;
+  color: #909aac;
+  font-size: 10px;
+}
+.ticker:has(input:disabled) {
+  opacity: 0.5;
+  cursor: default;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  min-width: 0;
+}
+.chart-panel {
+  padding: 26px;
+}
+.chart-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.chart-heading h2 {
+  font-size: 20px;
+}
+.chart {
+  height: 330px;
+  margin-top: 24px;
+  font-size: 11px;
+}
+.empty {
+  min-height: 330px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #7c879b;
+  text-align: center;
+}
+.stats {
+  padding: 25px;
+}
+.table-wrap {
+  overflow-x: auto;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  text-align: right;
+  font-size: 13px;
+}
+th:first-child {
+  text-align: left;
+}
+thead th {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  color: #8a94a6;
+  font-weight: 500;
+}
+th,
+td {
+  padding: 14px 9px;
+  border-bottom: 1px solid #edf0f5;
+  white-space: nowrap;
+}
+.positive {
+  color: #098468;
+}
+.negative {
+  color: #cf4d5e;
+}
+button {
+  background: #4263eb;
+  border: 0;
+  border-radius: 6px;
+  padding: 10px 16px;
+  color: white;
+  cursor: pointer;
+}
+input:focus-visible,
+button:focus-visible {
+  outline: 2px solid #4263eb;
+  outline-offset: 3px;
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+  color: #8e98a9;
+  font-size: 10px;
+  padding: 28px 0 36px;
+}
+@media (max-width: 850px) {
+  .app {
+    padding: 0 20px;
+  }
+  main {
+    grid-template-columns: 1fr;
+  }
+  .ticker-list {
+    max-height: 180px;
+  }
+  h1 {
+    font-size: 28px;
+  }
+  .chart-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .chart-panel,
+  .stats {
+    padding: 18px;
+  }
+  footer {
+    gap: 14px;
+    flex-direction: column;
+  }
+  header .badge {
+    display: none;
+  }
+}
